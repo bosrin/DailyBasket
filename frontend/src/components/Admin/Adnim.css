@@ -1,0 +1,245 @@
+/* =========================================
+   🌿 Admin Dashboard — Professional Style
+========================================= */
+.admin-dashboard {
+  background-color: #12131c; /* smoother dark tone */
+  color: #00b865; /* fresher green */
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  transition: background 0.3s ease;
+}
+
+/* ---------- Titles ---------- */
+.dashboard-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  color: #00b865;
+  letter-spacing: 1px;
+}
+
+.dashboard-subtitle {
+  font-size: 1.4rem;
+  margin: 1.5rem 0 1rem;
+  font-weight: 600;
+  color: #b8f1c5;
+  text-align: center; /* centers the subtitle */
+}
+
+
+/* ---------- Tabs ---------- */
+.dashboard-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.dashboard-tabs button {
+  background: #161822;
+  color: #00b865;
+  border: 2px solid #00b865;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 184, 101, 0.2);
+}
+
+.dashboard-tabs button:hover {
+  background: #00b865;
+  color: #12131c;
+  transform: translateY(-2px);
+}
+
+.dashboard-tabs .active-tab {
+  background: #00b865;
+  color: #12131c;
+  box-shadow: 0 4px 10px rgba(0, 184, 101, 0.4);
+}
+
+/* ---------- Form ---------- */
+.menu-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center; 
+  align-items: center;    
+}
+
+
+.menu-form input,
+.menu-form select,
+.menu-form button {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #00b865;
+  background-color: #161822;
+  color: #b8f1c5;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.menu-form input::placeholder {
+  color: #00b86590;
+}
+
+.menu-form input:focus,
+.menu-form select:focus {
+  border-color: #00ff99;
+  box-shadow: 0 0 8px rgba(0, 255, 153, 0.3);
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  border: 2px solid #00b865;
+  background-color: #00b865;
+  color: #12131c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: transparent;
+  color: #00b865;
+  box-shadow: 0 0 8px rgba(0, 184, 101, 0.4);
+}
+
+/* ---------- Table ---------- */
+.menu-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #161822;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+}
+
+.menu-table th,
+.menu-table td {
+  border: 1px solid #00b86540;
+  padding: 0.8rem;
+  text-align: center;
+  color: #d3f8e2;
+}
+
+.menu-table th {
+  background: #0f1017;
+  color: #00ff99;
+  font-weight: 600;
+}
+
+.menu-table tr:nth-child(even) {
+  background-color: #1a1b27;
+}
+
+.menu-img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid #00b86550;
+}
+
+/* ---------- Action Buttons ---------- */
+.edit-btn,
+.delete-btn {
+  padding: 0.5rem 1rem; /* same padding for both */
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-right: 0.5rem; 
+  min-width: 100px; /* ensures same width */
+  text-align: center; /* centers text */
+}
+
+/* Edit button */
+.edit-btn {
+  background-color: #00b865;
+  color: #12131c;
+}
+
+.edit-btn:hover {
+  background-color: transparent;
+  color: #00b865;
+  border: 1px solid #00b865;
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #ff4d4f;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #ff6b6d;
+  transform: scale(1.05);
+}
+
+/* ---------- Notifications ---------- */
+.notifications {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  z-index: 1000;
+}
+
+.notification {
+  background-color: #161822;
+  color: #00ff99;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 255, 153, 0.2);
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ---------- Responsive (Mobile) ---------- */
+@media (max-width: 600px) {
+  .dashboard-tabs {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .menu-form {
+    flex-direction: column;
+  }
+
+  .menu-table th,
+  .menu-table td {
+    font-size: 0.85rem;
+    padding: 0.4rem;
+  }
+
+  .menu-img {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,207 @@
+/* ---------- Container ---------- */
+.account-container {
+  min-height: 100vh;
+  background-color: #1e1e2f; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem;
+  box-sizing: border-box;
+  color: #00a651; /* Default text color */
+}
+
+/* ---------- Account Box ---------- */
+.account-box {
+  background: #2a2a3c; /* Slightly lighter for contrast */
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 380px;
+  max-width: 90%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  border: 2px solid #00a651;
+  text-align: center;
+  color: #00a651;
+  transition: all 0.3s ease;
+}
+
+.account-box:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+}
+
+/* ---------- Title ---------- */
+.account-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #00a651;
+}
+
+/* ---------- Input Boxes ---------- */
+.input-box {
+  display: flex;
+  align-items: center;
+  background: #3b3b52;
+  margin-bottom: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.input-box:hover {
+  box-shadow: 0 0 8px rgba(0, 166, 81, 0.5);
+}
+
+.input-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: #00a651;
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.icon {
+  margin-right: 0.75rem;
+  color: #00a651;
+}
+
+.eye-icon {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: #00a651;
+}
+
+/* ---------- Buttons ---------- */
+.main-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #00a651;
+  border: none;
+  border-radius: 8px;
+  color: #1e1e2f;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.main-btn:hover {
+  background: #00cc58;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 204, 88, 0.5);
+}
+
+/* ---------- Toggle Links ---------- */
+.toggle-link {
+  margin-top: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #00a651;
+  transition: all 0.3s ease;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+  color: #00cc58;
+}
+
+/* ---------- Remember Me ---------- */
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #00a651;
+}
+
+/* ---------- Role Select Dropdown ---------- */
+.role-select {
+  display: flex;
+  align-items: center;
+  background: #3b3b52;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.role-select:hover,
+.role-select select:focus {
+  box-shadow: 0 0 10px rgba(0, 166, 81, 0.5);
+}
+
+.role-select .icon {
+  color: #00a651;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.role-select select {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  background: transparent;
+  color: #00a651;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  appearance: none;
+}
+
+.role-select::after {
+  content: "▼";
+  position: absolute;
+  right: 15px;
+  color: #00a651;
+  font-size: 0.8rem;
+  pointer-events: none;
+}
+
+.role-select select option {
+  background: #2a2a3c;
+  color: #00a651;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 768px) {
+  .account-box {
+    width: 90%;
+    padding: 1.8rem;
+    border-radius: 10px;
+  }
+  .account-title {
+    font-size: 1.5rem;
+  }
+  .main-btn {
+    padding: 0.65rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-container {
+    padding: 0.5rem;
+  }
+  .account-box {
+    width: 100%;
+    padding: 1.5rem;
+    box-shadow: none;
+    border: 1px solid #00a651;
+  }
+  .account-title {
+    font-size: 1.3rem;
+  }
+  .main-btn {
+    font-size: 0.95rem;
+  }
+}

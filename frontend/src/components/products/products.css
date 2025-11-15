@@ -1,0 +1,258 @@
+
+/* ====== Menu Showcase Section ====== */
+.menu-showcase {
+  padding: 6rem 10%;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1e1e2f; /* dark background */
+  color: #00a651;            /* green text */
+}
+
+
+/* Section Title */
+.menu-section-title {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+ color: #00a651; 
+  margin-bottom: 0.5rem;
+}
+
+.menu-section-sub {
+  font-size: 1.1rem;
+   color: #00a651; 
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+
+
+/* ---------- Dropdown ---------- */
+.menu-dropdown {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  padding-bottom: 18px;
+}
+
+.menu-dropdown select {
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #00a651;
+  border-radius: 8px;
+  background-color: #1e1e2f;
+  cursor: pointer;
+  outline: none;
+  color: #00a651;
+  transition: 0.3s ease;
+}
+
+.menu-dropdown select:hover {
+  border-color: #00d16c;
+  color: #00d16c;
+}
+
+/* ===== Menu Card ===== */
+.menu-card {
+  background-color: #1e1e2f; /* Dark background matching menu */
+  color: #00a651;           /* Green text */
+  border-radius: 16px;
+  padding: 1.5rem;
+  max-width: 280px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 166, 81, 0.2); /* softened green glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+   box-shadow: 0 0 25px rgba(0, 166, 81, 0.35);
+}
+
+
+.menu-card h3 {
+  font-size: 1.2rem;
+  color: #00ff85;
+  margin-bottom: 0.5rem;
+}
+
+.menu-card p {
+  color: #a0ffaa;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 3rem; 
+  justify-items: center; 
+}
+
+.menu-card img {
+  width: 230px;
+  height: 200px;
+  object-fit: cover;   
+  border-radius: 8px;
+}
+
+
+
+/* Price & Add Button */
+.price-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #00a651;;
+}
+
+.price-add button {
+  background: #00a651;;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.price-add button:hover {
+  background: #00a651;;
+}
+
+/* ===== Explore Button ===== */
+.explore-btn {
+  margin-top: 3rem;
+  background: #00a651;;
+  color: #1b0f06;
+  border: none;
+  padding: 0.9rem 2.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #00a651;;
+  transform: translateY(-3px);
+}
+
+
+/* ======================= Tablet (768px - 1023px) ======================= */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .menu-showcase {
+    padding: 4rem 6%;
+  }
+
+  .menu-section-title {
+    font-size: 2.2rem;
+  }
+
+  .menu-section-sub {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .menu-tabs {
+    gap: 0.8rem;
+  }
+
+  .menu-tab {
+    padding: 0.6rem 1.5rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .menu-card img {
+    width: 200px;
+    height: 180px;
+  }
+
+  .menu-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .menu-card p {
+    font-size: 0.9rem;
+  }
+
+  .price-add button {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .explore-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* ======================= Mobile (phones) ======================= */
+@media (max-width: 767px) {
+  .menu-showcase {
+    padding: 3rem 5%;
+  }
+
+  .menu-section-title {
+    font-size: 1.8rem;
+  }
+
+  .menu-section-sub {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .menu-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .menu-tab {
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 0;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .menu-card {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .menu-card img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .menu-card h3 {
+    font-size: 1rem;
+  }
+
+  .menu-card p {
+    font-size: 0.85rem;
+  }
+
+  .price-add {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .price-add button {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .explore-btn {
+    width: 100%;
+    padding: 0.7rem 0;
+    font-size: 0.95rem;
+  }
+}

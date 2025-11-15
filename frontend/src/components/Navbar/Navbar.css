@@ -1,0 +1,306 @@
+/* 🌙 NAVBAR BASE */
+.navbar {
+  width: 100%;
+  background-color: #1e1e2f;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid hsl(240, 20%, 22%);
+  transition: all 0.3s ease;
+}
+
+/* 🧭 Navbar Container */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+}
+
+/* 🛒 Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.logo-icon {
+  font-size: 1.6rem;
+  color: #ffcc00;
+}
+
+/* 🍔 Hamburger (Mobile) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* 🌐 Menu Links (Desktop) */
+.menu-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 8px 18px;
+  border-radius: 8px 8px 0 0;
+  font-weight: 500;
+}
+
+/* 🔥 Active & Hover States */
+.menu-links li a:hover,
+.menu-links li a.active {
+  background-color: #1e1e2f;
+  color: #fff;
+  box-shadow: 0 -3px 0#1e1e2f inset;
+}
+
+/* 🧩 Icons */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.icon-btn:hover {
+  color: #ffcc00;
+  transform: scale(1.1);
+}
+
+/* 👤 User Section (Profile + Login) */
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+/* 📂 Dropdown Menu */
+.user-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  background-color: #2a2a40;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 160px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+  background-color: #8080f5;
+  color: #ffcc00;
+}
+
+/* ✨ Login Button */
+.login-btn {
+  background: linear-gradient(135deg, #00b865, #009f58);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 1rem;
+  margin-left: 0.6rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #009f58, #007a43);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 255, 128, 0.3);
+}
+
+/* 🌈 Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ================================
+   📌 TABLET & MOBILE (max-width: 992px)
+   ================================ */
+@media (max-width: 992px) {
+
+  .navbar-container {
+    padding: 10px 16px;
+  }
+
+  /* 🍔 Hamburger visible */
+  .hamburger {
+    display: block;
+  }
+
+  /* 🔽 Hide desktop menu */
+  .menu-links {
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    background-color: #1e1e2f;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    display: none;
+    padding: 18px 0;
+    border-top: 2px solid #2d2d44;
+  }
+
+  .menu-links.active {
+    display: flex;
+  }
+
+  /* 🔗 Menu links */
+  .menu-links li {
+    width: 95%;
+    margin: 6px 0;
+    text-align: center;
+  }
+
+  .menu-links li a {
+    display: block;
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  .menu-links li a:hover,
+  .menu-links li a.active {
+    background-color: #2d2d44;
+    color: #ffcc00;
+    box-shadow: none;
+  }
+
+  /* Icons adjust */
+  .icons {
+    gap: 10px;
+  }
+
+  .icon-btn {
+    font-size: 1.2rem;
+  }
+
+  /* Login button */
+  .login-btn {
+    padding: 0.38rem 0.85rem;
+    font-size: 0.85rem;
+  }
+
+  /* User dropdown adjust for mobile */
+  .dropdown-menu {
+    right: 0;
+    min-width: 150px;
+  }
+}
+
+/* ================================
+   📌 SMALL MOBILE (max-width: 600px)
+   ================================ */
+@media (max-width: 600px) {
+
+  .navbar-container {
+    padding: 8px 12px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .logo-icon {
+    font-size: 1.3rem;
+  }
+
+  .icon-btn {
+    font-size: 1.1rem;
+  }
+
+  /* Menu links smaller for small phones */
+  .menu-links li a {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .login-btn {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ================================
+   📌 EXTRA SMALL (max-width: 430px)
+   ================================ */
+@media (max-width: 430px) {
+
+  .navbar-container {
+    padding: 6px 10px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .logo-icon {
+    font-size: 1.2rem;
+  }
+
+  .menu-links {
+    top: 58px;
+  }
+
+  .menu-links li a {
+    padding: 9px 12px;
+    font-size: 0.85rem;
+  }
+
+  .icon-btn {
+    font-size: 1rem;
+  }
+}
