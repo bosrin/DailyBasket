@@ -8,44 +8,47 @@ export default function Navbar() {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-  const closeMenu = () => setMenuOpen(false);
-
-  const toggleUserMenu = () => setUserMenuOpen(!userMenuOpen);
-  const closeUserMenu = () => setUserMenuOpen(false);
-
-  const handleCartClick = () => {
-    closeMenu();
-    navigate("/cart");
+  // Toggle hamburger menu
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+    setUserMenuOpen(false);
   };
 
-  const handleSearchClick = () => {
+  // Toggle user dropdown
+  const toggleUserMenu = () => {
+    setUserMenuOpen((prev) => !prev);
+    setMenuOpen(false);
+  };
+
+  // Close all menus
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setUserMenuOpen(false);
+  };
+
+  // Navigation handlers
+  const handleNavigate = (path) => {
     closeMenu();
-    navigate("/search");
+    navigate(path);
   };
 
   const handleUserOptionClick = (option) => {
-    closeUserMenu();
-    closeMenu();
     if (option === "profile") navigate("/profile");
-    else if (option === "admin") navigate("/admin");
-  };
-
-  const handleLoginClick = () => {
+    if (option === "admin") navigate("/admin");
     closeMenu();
-    navigate("/login");
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
+
         {/* Logo */}
-        <div className="logo" onClick={() => { closeMenu(); navigate("/"); }}>
+        <div className="logo" onClick={() => handleNavigate("/")}>
           <div className="logo-icon">🛒</div>
           <span className="logo-text">DailyBasket</span>
         </div>
 
-        {/* Hamburger Menu for Mobile */}
+        {/* Hamburger Menu */}
         <button
           className="hamburger"
           onClick={toggleMenu}
@@ -54,37 +57,51 @@ export default function Navbar() {
           {menuOpen ? <X className="icon" /> : <Menu className="icon" />}
         </button>
 
-        {/* Menu Links */}
+        {/* Navigation Links */}
         <ul className={`menu-links ${menuOpen ? "active" : ""}`}>
           <li>
-            <NavLink to="/" onClick={closeMenu}>Home</NavLink>
+            <NavLink to="/" onClick={closeMenu}>
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/products" onClick={closeMenu}>Products</NavLink>
+            <NavLink to="/products" onClick={closeMenu}>
+              Products
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/reviews" onClick={closeMenu}>Review</NavLink>
+            <NavLink to="/reviews" onClick={closeMenu}>
+              Review
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
+            <NavLink to="/contact" onClick={closeMenu}>
+              Contact
+            </NavLink>
           </li>
         </ul>
 
-        {/* Icons */}
+        {/* Right Side Icons */}
         <div className="icons">
-          <button className="icon-btn" aria-label="Search" onClick={handleSearchClick}>
+          {/* Search */}
+          <button
+            className="icon-btn"
+            aria-label="Search"
+            onClick={() => handleNavigate("/search")}
+          >
             <Search className="icon" />
           </button>
 
+          {/* Cart */}
           <button
             className="icon-btn"
             aria-label="Shopping Cart"
-            onClick={handleCartClick}
+            onClick={() => handleNavigate("/cart")}
           >
             <ShoppingCart className="icon" />
           </button>
 
-          {/* User Dropdown + Login Button */}
+          {/* User Dropdown + Login */}
           <div className="user-section">
             <div className="user-dropdown">
               <button
@@ -100,12 +117,14 @@ export default function Navbar() {
                   <li onClick={() => handleUserOptionClick("profile")}>
                     User Profile
                   </li>
-                  <li onClick={() => handleUserOptionClick("admin")}>Admin</li>
+                  <li onClick={() => handleUserOptionClick("admin")}>
+                    Admin
+                  </li>
                 </ul>
               )}
             </div>
 
-            <button className="login-btn" onClick={handleLoginClick}>
+            <button className="login-btn" onClick={() => handleNavigate("/login")}>
               Login
             </button>
           </div>

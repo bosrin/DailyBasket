@@ -508,24 +508,156 @@ body {
   text-align: center;
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 900px) {
-  .footer {
-    padding: 3rem 2rem;
+/* 🌐 RESPONSIVE FOR TAB + PHONE */
+
+/* ---------- Tablets (768px – 1024px) ---------- */
+@media (max-width: 1024px) {
+  /* HERO */
+  .organic-container {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .footer-columns {
+  .organic-left img,
+  .organic-right img {
+    width: 200px;
+  }
+
+  /* WHY SECTION */
+  .why-section {
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    gap: 2.5rem;
+  }
+
+  .why-left img {
+    width: 240px;
+  }
+
+  /* FOOTER */
+  .footer-columns {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
   }
 
   .footer-about {
-    text-align: center;
+    padding-left: 0;
   }
 
-  .subscribe {
-    margin: 1rem auto;
+  .footer-nav {
+    padding-left: 0;
+  }
+
+  .subscribe input {
+    width: 200px;
   }
 }
+
+
+/* ---------- MOBILE PHONES (≤768px) ---------- */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .organic-section {
+    padding: 3rem 1rem;
+  }
+
+  .organic-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .organic-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .organic-content p {
+    font-size: 1rem;
+  }
+
+  .organic-left img,
+  .organic-right img {
+    width: 180px;
+  }
+
+  /* FEATURES */
+  .features-section {
+    padding: 3rem 1rem;
+  }
+
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* VALUE SECTION */
+  .value-section {
+    padding: 3rem 5%;
+  }
+
+  .value-title {
+    font-size: 1.8rem;
+  }
+
+  .mobile-item {
+    padding: 1rem;
+  }
+
+  /* WHY WE ARE BEST */
+  .why-section {
+    padding: 3rem 1rem;
+    gap: 2rem;
+  }
+
+  .why-title {
+    font-size: 1.6rem;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 2.5rem 1rem;
+  }
+
+  .subscribe input {
+    width: 180px;
+  }
+}
+
+
+/* ---------- SMALL PHONES (≤480px) ---------- */
+@media (max-width: 480px) {
+
+  /* HERO */
+  .organic-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .organic-left img,
+  .organic-right img {
+    width: 150px;
+  }
+
+  /* FEATURES */
+  .feature-card {
+    max-width: 280px;
+    padding: 1.5rem;
+  }
+
+  /* VALUE */
+  .mobile-item p {
+    font-size: 0.8rem;
+  }
+
+  /* WHY SECTION */
+  .why-left img {
+    width: 200px;
+  }
+
+  /* FOOTER */
+  .subscribe input {
+    width: 150px;
+    font-size: 0.7rem;
+  }
+}
+

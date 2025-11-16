@@ -220,26 +220,87 @@
     opacity: 1;
   }
 }
+/* ---------- Responsive for Tablets (600px – 900px) ---------- */
+@media (min-width: 600px) and (max-width: 900px) {
 
-/* ---------- Responsive (Mobile) ---------- */
-@media (max-width: 600px) {
+  .admin-dashboard {
+    padding: 5rem 1.5rem;
+  }
+
+  .dashboard-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dashboard-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Tabs better spacing */
   .dashboard-tabs {
-    flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.8rem;
+    flex-wrap: wrap;
   }
 
+  .dashboard-tabs button {
+    padding: 0.55rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  /* Form alignment */
   .menu-form {
-    flex-direction: column;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
+  .menu-form input,
+  .menu-form select {
+    width: 48%;
+    font-size: 0.95rem;
+  }
+
+  .menu-form button {
+    width: 48%;
+    font-size: 1rem;
+  }
+
+  /* Table */
   .menu-table th,
   .menu-table td {
-    font-size: 0.85rem;
-    padding: 0.4rem;
+    padding: 0.6rem;
+    font-size: 0.9rem;
   }
 
   .menu-img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 0.45rem 0.8rem;
+    min-width: 90px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ---------- Extra Responsive: Small Tablets (700px–900px) ---------- */
+@media (min-width: 700px) and (max-width: 900px) {
+
+  .menu-form input,
+  .menu-form select {
+    width: 32%;
+  }
+
+  .menu-form button {
+    width: 32%;
+  }
+
+  .dashboard-tabs {
+    justify-content: center;
+    gap: 1rem;
+  }
+
 }

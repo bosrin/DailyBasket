@@ -1,43 +1,56 @@
-/* ---------- Container ---------- */
+/* --------------------------------------------------
+   CONTAINER
+-------------------------------------------------- */
 .account-container {
   min-height: 100vh;
-  background-color: #1e1e2f; 
+  background-color: #1e1e2f;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Poppins", sans-serif;
   padding: 1rem;
   box-sizing: border-box;
-  color: #00a651; /* Default text color */
+  color: #00a651;
 }
 
-/* ---------- Account Box ---------- */
+/* --------------------------------------------------
+   ACCOUNT BOX
+-------------------------------------------------- */
 .account-box {
-  background: #2a2a3c; /* Slightly lighter for contrast */
+  background: #2a2a3c;
   padding: 2.5rem;
   border-radius: 12px;
   width: 380px;
   max-width: 90%;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
-  border: 2px solid #00a651;
   text-align: center;
   color: #00a651;
-  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  border: 2px solid #00a651;
+  transition: 0.3s ease;
 }
 
 .account-box:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
 }
 
-/* ---------- Title ---------- */
-.account-title {
+/* --------------------------------------------------
+   TITLES
+-------------------------------------------------- */
+.account-title,
+.forgot-title {
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
   font-weight: 600;
   color: #00a651;
 }
 
-/* ---------- Input Boxes ---------- */
+.forgot-title {
+  margin-bottom: 2rem;
+}
+
+/* --------------------------------------------------
+   INPUT BOXES
+-------------------------------------------------- */
 .input-box {
   display: flex;
   align-items: center;
@@ -45,7 +58,7 @@
   margin-bottom: 1rem;
   padding: 0.6rem 1rem;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .input-box:hover {
@@ -65,6 +78,7 @@
 .icon {
   margin-right: 0.75rem;
   color: #00a651;
+  font-size: 1.2rem;
 }
 
 .eye-icon {
@@ -73,7 +87,9 @@
   color: #00a651;
 }
 
-/* ---------- Buttons ---------- */
+/* --------------------------------------------------
+   BUTTONS
+-------------------------------------------------- */
 .main-btn {
   width: 100%;
   padding: 0.75rem;
@@ -85,7 +101,7 @@
   cursor: pointer;
   margin-top: 1rem;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .main-btn:hover {
@@ -94,24 +110,37 @@
   box-shadow: 0 4px 12px rgba(0, 204, 88, 0.5);
 }
 
-/* ---------- Toggle Links ---------- */
-.toggle-link {
-  margin-top: 1rem;
-  cursor: pointer;
-  display: inline-flex;
+/* --------------------------------------------------
+   TOGGLE LINKS
+-------------------------------------------------- */
+/* --------- CLEAN HORIZONTAL GAPPED LINKS --------- */
+.toggle-wrap {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  color: #00a651;
-  transition: all 0.3s ease;
+  gap: 1.4rem;        
+  margin-top: 1.6rem;  /* increase space below the button */
+  flex-wrap: nowrap;
 }
+
+.toggle-link {
+  white-space: nowrap;  /* forces text to stay in one line */
+  text-align: center;
+  cursor: pointer;
+   
+}
+
 
 .toggle-link:hover {
   text-decoration: underline;
   color: #00cc58;
 }
 
-/* ---------- Remember Me ---------- */
+
+
+/* --------------------------------------------------
+   REMEMBER ME
+-------------------------------------------------- */
 .remember-me {
   display: flex;
   align-items: center;
@@ -121,7 +150,9 @@
   color: #00a651;
 }
 
-/* ---------- Role Select Dropdown ---------- */
+/* --------------------------------------------------
+   ROLE SELECT DROPDOWN
+-------------------------------------------------- */
 .role-select {
   display: flex;
   align-items: center;
@@ -131,7 +162,7 @@
   margin: 1rem 0;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   position: relative;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .role-select:hover,
@@ -169,17 +200,52 @@
 .role-select select option {
   background: #2a2a3c;
   color: #00a651;
-  font-family: "Poppins", sans-serif;
 }
 
-/* ---------- Responsive Design ---------- */
+/* --------------------------------------------------
+   FORGOT PASSWORD EXTRA CSS
+-------------------------------------------------- */
+.forgot-box {
+  animation: slideIn 0.4s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.back-link {
+  margin-top: 1rem;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  color: #00a651;
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  color: #00cc58;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------
+   RESPONSIVE DESIGN - TABLET
+-------------------------------------------------- */
 @media (max-width: 768px) {
   .account-box {
     width: 90%;
-    padding: 1.8rem;
+    padding: 2rem;
     border-radius: 10px;
   }
-  .account-title {
+  .account-title,
+  .forgot-title {
     font-size: 1.5rem;
   }
   .main-btn {
@@ -188,20 +254,36 @@
   }
 }
 
+/* --------------------------------------------------
+   RESPONSIVE DESIGN - PHONE
+-------------------------------------------------- */
 @media (max-width: 480px) {
   .account-container {
     padding: 0.5rem;
   }
+
   .account-box {
     width: 100%;
     padding: 1.5rem;
     box-shadow: none;
     border: 1px solid #00a651;
   }
-  .account-title {
+
+  .account-title,
+  .forgot-title {
     font-size: 1.3rem;
   }
+
   .main-btn {
     font-size: 0.95rem;
+  }
+
+  .input-box input {
+    font-size: 0.9rem;
+  }
+
+  .toggle-link,
+  .back-link {
+    font-size: 0.85rem;
   }
 }

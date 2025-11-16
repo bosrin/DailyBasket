@@ -140,8 +140,9 @@
 }
 
 
-/* ======================= Tablet (768px - 1023px) ======================= */
+/* ======================= TABLET (768px - 1023px) ======================= */
 @media (min-width: 768px) and (max-width: 1023px) {
+
   .menu-showcase {
     padding: 4rem 6%;
   }
@@ -155,21 +156,29 @@
     margin-bottom: 2.5rem;
   }
 
-  .menu-tabs {
-    gap: 0.8rem;
+  /* Dropdown full width centered */
+  .menu-dropdown {
+    padding-bottom: 15px;
   }
 
-  .menu-tab {
-    padding: 0.6rem 1.5rem;
+  .menu-dropdown select {
+    font-size: 15px;
+    padding: 10px 14px;
   }
 
+  /* 2 columns on tablet */
   .menu-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 
+  .menu-card {
+    max-width: 100%;
+    padding: 1.2rem;
+  }
+
   .menu-card img {
-    width: 200px;
+    width: 100%;
     height: 180px;
   }
 
@@ -182,7 +191,7 @@
   }
 
   .price-add button {
-    padding: 0.5rem 0.8rem;
+    padding: 0.5rem 1rem;
   }
 
   .explore-btn {
@@ -191,14 +200,18 @@
   }
 }
 
-/* ======================= Mobile (phones) ======================= */
+
+
+/* ======================= MOBILE (≤ 767px) ======================= */
 @media (max-width: 767px) {
+
   .menu-showcase {
-    padding: 3rem 5%;
+    padding: 3rem 6%;
   }
 
   .menu-section-title {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+    line-height: 1.3;
   }
 
   .menu-section-sub {
@@ -206,22 +219,19 @@
     margin-bottom: 2rem;
   }
 
-  .menu-tabs {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .menu-tab {
+  /* Dropdown 100% width */
+  .menu-dropdown select {
     width: 100%;
-    text-align: center;
-    padding: 0.6rem 0;
+    font-size: 15px;
   }
 
+  /* 1 Column ONLY */
   .menu-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.4rem;
   }
 
+  /* Card full width */
   .menu-card {
     max-width: 100%;
     padding: 1rem;
@@ -240,19 +250,50 @@
     font-size: 0.85rem;
   }
 
+  /* Price + Add Button vertical */
   .price-add {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.6rem;
+    align-items: center;
   }
 
   .price-add button {
     width: 100%;
+    padding: 0.6rem 0;
+  }
+
+  /* Explore btn full width */
+  .explore-btn {
+    width: 100%;
+    padding: 0.9rem 0;
+    font-size: 1rem;
+    border-radius: 25px;
+  }
+}
+
+
+
+/* ======================= SMALL PHONES (≤ 480px) ======================= */
+@media (max-width: 480px) {
+
+  .menu-section-title {
+    font-size: 1.7rem;
+  }
+
+  .menu-section-sub {
+    font-size: 0.9rem;
+  }
+
+  .menu-card img {
+    height: 140px;
+  }
+
+  .price-add button {
     padding: 0.5rem 0;
+    font-size: 0.9rem;
   }
 
   .explore-btn {
-    width: 100%;
-    padding: 0.7rem 0;
     font-size: 0.95rem;
   }
 }

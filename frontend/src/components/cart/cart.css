@@ -234,22 +234,57 @@
 .checkout-btn:hover {
   background: #00e06b;
 }
+/* ============================
+   📱 Tablet Responsive (600px – 900px)
+============================ */
+@media (min-width: 600px) and (max-width: 900px) {
 
-/* ========================
-   Responsive Design
-======================== */
-@media (max-width: 768px) {
+  .cart-section {
+    padding: 3rem 2rem;
+  }
+
+  .cart-section h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* Cart items layout */
+  .cart-items {
+    gap: 1.5rem;
+  }
+
   .cart-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
+    padding: 1.2rem;
+    gap: 1.5rem;
   }
 
   .cart-item img {
-    margin: 0;
-    width: 100%;
-    max-width: 200px;
-    height: auto;
+    width: 80px;
+    height: 80px;
+  }
+
+  .item-info h4 {
+    font-size: 1rem;
+  }
+
+  .item-info p {
+    font-size: 0.95rem;
+  }
+
+  /* Quantity Controls */
+  .quantity-controls {
+    gap: 0.5rem;
+  }
+
+  .quantity-controls button {
+    width: 30px;
+    height: 30px;
+    font-size: 0.95rem;
+  }
+
+  .remove-btn {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.9rem;
   }
 
   .cart-summary h3 {
@@ -257,23 +292,95 @@
   }
 
   .cart-actions button {
-    width: 100%;
-    max-width: 300px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
   }
 }
 
-@media (max-width: 480px) {
+/* ============================
+   📱 Larger Phones (480px – 600px)
+============================ */
+@media (min-width: 480px) and (max-width: 600px) {
+
   .cart-section {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 
   .cart-section h2 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+  }
+
+  .cart-item {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .cart-item img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .item-info {
+    flex-direction: column;
+    gap: 0.6rem;
+    text-align: center;
+  }
+
+  .quantity-controls {
+    justify-content: center;
+  }
+
+  .cart-actions button {
+    width: 100%;
+  }
+
+  .cart-summary h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* ============================
+   📱 Small Phones (480px and below)
+============================ */
+@media (max-width: 480px) {
+
+  .cart-section {
+    padding: 1rem 0.5rem;
+  }
+
+  .cart-item {
+    padding: 0.9rem;
+  }
+
+  .item-info h4 {
+    font-size: 1rem;
+  }
+
+  .item-info p {
+    font-size: 0.9rem;
   }
 
   .quantity-controls button {
-    width: 26px;
-    height: 26px;
-    font-size: 0.9rem;
+    width: 24px;
+    height: 24px;
+    font-size: 0.85rem;
+  }
+
+  .remove-btn {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .cart-summary {
+    padding: 1rem;
+  }
+
+  .cart-summary h3 {
+    font-size: 1.2rem;
+  }
+
+  .cart-actions button {
+    width: 100%;
+    font-size: 0.95rem;
   }
 }

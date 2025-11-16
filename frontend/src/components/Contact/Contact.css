@@ -216,14 +216,140 @@ textarea {
 .footer-copy span {
   color: #00a651;
 }
+/* ============================
+   📱 Tablet (600px – 900px)
+============================ */
+@media (min-width: 600px) and (max-width: 900px) {
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .footer-columns {
-    grid-template-columns: 1fr;
+  .contact-section {
+    padding: 70px 40px;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-container {
+    gap: 25px;
+  }
+
+  .contact-info,
+  .contact-form {
+    min-width: 45%;
+  }
+
+  .contact-card {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .input-box input,
+  textarea {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+ 
+}
+
+
+/* ============================
+   📱 Big Phones (480px – 600px)
+============================ */
+@media (min-width: 480px) and (max-width: 600px) {
+
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-info,
+  .contact-form {
+    min-width: 100%;
+  }
+
+  .contact-card {
+    padding: 18px;
+  }
+
+  .contact-card .icon {
+    font-size: 1.6rem;
+  }
+
+  textarea {
+    height: 90px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+ 
+}
+
+
+/* ============================
+   📱 Small Phones (0 – 480px)
+============================ */
+@media (max-width: 480px) {
+
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .contact-container {
+    width: 100%;
+    gap: 25px;
+  }
+
+  .contact-card {
+    flex-direction: column;
     text-align: center;
   }
-  .social-icons {
-    justify-content: center;
+
+  .contact-card .icon {
+    font-size: 1.8rem;
   }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  label {
+    font-size: 0.95rem;
+  }
+
+  .input-box {
+    padding: 8px;
+  }
+
+  textarea {
+    height: 80px;
+  }
+
+  .btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+ 
 }
