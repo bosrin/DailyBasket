@@ -256,11 +256,9 @@
   }
 
   .icons {
-    display: flex;
-    gap: 2px;
-    padding-right: 8px;
-    align-items: center;
-    flex-shrink: 0;      /* <-- Fix disappearing issue */
+   
+    gap: 0.2rem;
+        
   }
 
   .login-btn {
